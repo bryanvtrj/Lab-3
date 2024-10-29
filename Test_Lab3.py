@@ -28,3 +28,15 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+
+def test_bubble_sort_large_input():
+    # This test checks if the function returns 1 when >= 10 numbers are entered
+    input_arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    
+    # Call bubble_sort with SORT_ASCENDING (or SORT_DESCENDING, it doesn't matter here)
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    
+    # Assert that the result is 1 as expected
+    assert result == 1, f"Expected 1 for input size >= 10, but got {result}"
+    
